@@ -1,5 +1,6 @@
 {
   "name": "table_top_helper",
+  "homepage": "http://DazzlingFame.github.io/table_top_helper",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,11 +17,17 @@
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "redeps": "rm -rf node_modules && yarn",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
